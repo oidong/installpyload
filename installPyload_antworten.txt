@@ -1,0 +1,95 @@
+Choose your Language / Wähle deine Sprache ([en], de, fr, it, es, nl, sv, ru, pl, cs, sr, pt_BR): de
+
+Willkommen im pyLoad Konfigurations Assistenten.
+Er wird jetzt dein System überprüfen und Grundeinstellungen vornehmen.
+
+Die Werte in Klammer sind die Standard Werte,
+Falls du sie nicht ändern möchtest oder unsicher bist, drücke einfach Enter.
+Beachte: Du kannst diesen Assistenten jederzeit wieder mit dem --setup oder -s Parameter starten.
+Falls du beenden willst, drücke STRG-C,
+um abzubrechen und ihn nicht mehr automatisch zu starten.
+
+Wenn du für den System-Check bereit bist, drücke enter.
+
+## System Check ##
+Python Version: OK
+pycurl: OK
+sqlite3: OK
+
+pycrypto: OK
+py-OpenSSL: OK
+
+py-imaging: OK
+tesseract: OK
+
+PyQt4: OK
+
+Ihre installierte Version 2.7.2 von jinja2 scheint veraltet zu sein.
+Sie können problemlos fortfahren, sollte jedoch das Webinterface nicht funktionieren,
+sollten Sie es upgrade oder deinstallieren, pyload bringt eine ausreichende jinja2 Bibliothek mit.
+
+jinja2: fehlt
+beaker: OK
+JS engine: OK
+
+System-Check beendet, drücke Enter um deinen Status Bericht zu sehen.
+
+## Status ##
+
+Verfügbare Funktionen: Container decrypting, SSL Verbindung, Automatisches Captcha einlesen, GUI, Webinterface, erweitertes Click'N'Load
+
+Mit Setup fortfahren? ([j]/n): j
+
+Möchtest du den Configordner ändern? Jetziger ist /media/usb/pyload
+Falls du pyLoad auf einem Server benutzt, oder die home Partition auf einem internen Flashspeicher liegt, wär es eine gute Idee ihn zu ändern.
+Config Pfad ändern? (j/[n]): 
+
+Wollen Sie die Login-Daten und Grundeinstellungen festlegen?
+Wird für den ersten Start empfohlen.
+Erstelle Grundeinstellungen? ([j]/n): 
+
+## Grundeinstellungen ##
+
+Die folgenden Anmeldedaten sind für CLI, GUI und Webinterface gültig.
+Benutzername [User]: admin
+Passwort: 
+Password (nochmal): 
+
+Externe Clients (GUI, CLI und andere) benötigen Fernzugriff, um via Netzwerk zugreifen zu können.
+Solltest Du jedoch nur das Webinterface nutzen, kannst Du Ihn deaktivieren, um den Speicherverbrauch zu verringern.
+Aktiviere Fernzugriff ([j]/n): 
+
+Sprache ([en], de, fr, it, es, nl, sv, ru, pl, cs, sr, pt_BR): de
+Download Ordner [Downloads]: 
+Maximale parallele Downloads [3]: 5
+Benutze Reconnect? (j/[n]): 
+
+Willst du SSL konfigurieren?
+Konfiguriere SSL? (j/[n]): 
+
+Willst du das Webinterface konfigurieren?
+Konfiguriere Webinterface? ([j]/n): 
+
+## Webinterface Setup ##
+
+Aktiviere Webinterface? ([j]/n): 
+
+Listen Adresse. Falls du 127.0.0.1 oder localhost einträgst wird das Webinterface nur lokal erreichbar sein.
+Adresse [0.0.0.0]: 
+Port [8000]: 
+
+pyLoad verfügt über verschiedene Webserver, eine kurze Erklärung folgt.
+builtin: Standardserver, beste Wahl wenn du nicht weißt welchen du wählen sollst.
+threaded: Dieser Server unterstützt SSL und ist eine gute Alternative zu builtin.
+fastcgi: Kann von apache, lighttpd benutzt werden. Muss konfiguriert werden, welches aber nicht sehr einfach ist.
+lightweight: Sehr schnelle Alternative geschrieben in C, benötigt libev und Linux-Kenntnisse.
+	Downloaden von: https://github.com/jonashaag/bjoern, danach kompilieren.
+	und kopiere die bjoern.so nach module/lib
+
+Achtung: In manchen Fällen funktioniert der builtin Server nicht, wenn du Probleme mit dem Webinterface bemerkst.
+komme zurück und ändere den builtin server zu threaded hier
+Server ([builtin], threaded, fastcgi, lightweight): 
+
+Setup erfolgreich beendet.
+Drücke Enter zum beenden und starte pyLoad neu
+
